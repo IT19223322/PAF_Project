@@ -30,10 +30,10 @@ import org.jsoup.nodes.Document;
 	@Path("/") 
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
 	@Produces(MediaType.TEXT_PLAIN) 
-	public String insertItem(@FormParam("cardno") String cardNo, 
-	 @FormParam("nameonCard") String nameonCard, 
-	 @FormParam("expDate") String expDate, 
-	 @FormParam("cvv") String cvv) 
+	public String insertCusPayment(@FormParam("Card_No") String cardNo, 
+	 @FormParam("Name_on_card") String nameonCard, 
+	 @FormParam("Exp_date") String expDate, 
+	 @FormParam("Cvv") String cvv) 
 	
 	{ 
 	 String output = paymentObj.insertPaymentd(cardNo, nameonCard, expDate, cvv); 
