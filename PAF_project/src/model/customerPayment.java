@@ -69,7 +69,7 @@ public class customerPayment {
 		 {return "Error while connecting to the database for reading."; }
 		 
 		 // Prepare the html table to be displayed
-		 output = "<table border='1'><tr><th>Card ID</th><th>Card Number</th><th>Name on Card</th>" +
+		 output = "<table border='2'><tr><th>Card ID</th><th>Card Number</th><th>Name on Card</th>" +
 		 "<th>Expiration date</th>" +
 		 "<th>Cvv</th>" +
 		 "<th>Update</th><th>Remove</th></tr>";
@@ -90,7 +90,8 @@ public class customerPayment {
 		 String cvv = rs.getString("Cvv");
 		 
 		 // Add into the html table
-		 output += "<tr><td>" + cardNo  + "</td>";
+		 output += "<tr><td>" + cardId  + "</td>";
+		 output += "<td>" + cardNo  + "</td>";
 		 output += "<td>" + nameonCard + "</td>";
 		 output += "<td>" + expDate + "</td>";
 		 output += "<td>" + cvv  + "</td>";
