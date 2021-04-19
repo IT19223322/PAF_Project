@@ -118,7 +118,7 @@ public class customerPayment {
 	
 	//Update customer payment details
 	
-	public String updateCusPayment (String cardNo, String nameonCard, String expDate, String cvv) 
+	public String updateCusPayment (String cardId, String cardNo, String nameonCard, String expDate, String cvv) 
 	{ 
 	 String output = ""; 
 	 
@@ -131,10 +131,12 @@ public class customerPayment {
 	 String query = "UPDATE customer_payment SET Card_No=?,Name_on_card=?,Exp_date=?,Cvv=?  WHERE Card_Id=?"; 
 	 PreparedStatement preparedStmt = con.prepareStatement(query); 
 
+	 
 	 preparedStmt.setString(1, cardNo); 
 	 preparedStmt.setString(2, nameonCard); 
 	 preparedStmt.setString(3, expDate); 
 	 preparedStmt.setString(4, cvv); 
+	 preparedStmt.setInt(5, Integer.parseInt(cardId)); 
 	 
 
 	 preparedStmt.execute(); 
@@ -181,4 +183,3 @@ public class customerPayment {
 	 } 
 
 }
-//read works properly
