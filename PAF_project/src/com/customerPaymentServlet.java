@@ -50,10 +50,10 @@ import org.jsoup.nodes.Document;
 
 	 JsonObject paymentObject = new JsonParser().parse(cuspaymentInfo).getAsJsonObject(); 
 	 
-	 String cardNo = paymentObject.get("cardNo").getAsString(); 
-	 String nameonCard = paymentObject.get("nameonCard").getAsString(); 
-	 String expDate = paymentObject.get("expDate").getAsString(); 
-	 String cvv = paymentObject.get("cvv").getAsString(); 
+	 String cardNo = paymentObject.get("Card_No").getAsString(); 
+	 String nameonCard = paymentObject.get("Name_on_card").getAsString(); 
+	 String expDate = paymentObject.get("Exp_date").getAsString(); 
+	 String cvv = paymentObject.get("Cvv").getAsString(); 
 	 
 	 String output = paymentObj.updateCusPayment(cardNo, nameonCard, expDate, cvv); 
 	return output;
