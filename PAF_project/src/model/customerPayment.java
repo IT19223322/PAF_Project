@@ -176,7 +176,7 @@ public class customerPayment {
 	 } 
 	 catch (Exception e) 
 	 { 
-	 output = "Could not delete the project"; 
+	 output = "Fail to delete the record"; 
 	 System.err.println(e.getMessage()); 
 	 } 
 	 return output; 
